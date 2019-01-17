@@ -1,6 +1,6 @@
 extends layout
 block css
-  link(rel='stylesheet', href='/stylesheets/tokens.css')
+  link(rel='stylesheet', href='/code-push/stylesheets/tokens.css')
 
 block content
   h1(style="text-align: center;")= title
@@ -69,7 +69,7 @@ block js
           submit = false;
           if (errorThrown == 'Unauthorized') {
             alert('请重新登录!');
-            location.href = '/auth/login'
+            location.href = '/code-push/auth/login'
           }else {
             alert(errorThrown);
           }
