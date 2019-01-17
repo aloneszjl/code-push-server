@@ -86,12 +86,12 @@ if (_.get(config, "common.storageType") === "local") {
   }
 }
 
-app.use("/", routes);
-app.use("/auth", auth);
-app.use("/accessKeys", accessKeys);
-app.use("/account", account);
-app.use("/users", users);
-app.use("/apps", apps);
+app.use("/code-push/", routes);
+app.use("/code-push/auth", auth);
+app.use("/code-push/accessKeys", accessKeys);
+app.use("/code-push/account", account);
+app.use("/code-push/users", users);
+app.use("/code-push/apps", apps);
 
 // development error handler
 // will print stacktrace
