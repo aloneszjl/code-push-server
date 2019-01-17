@@ -34,7 +34,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use("/code-push", express.static(path.join(__dirname, "public")));
 
 //use nginx in production
 
