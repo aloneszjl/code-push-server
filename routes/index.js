@@ -9,7 +9,7 @@ var log4js = require("log4js");
 var log = log4js.getLogger("cps:index");
 
 router.get("/", (req, res, next) => {
-  res.render("code-push/index", { title: "CodePushServer" });
+  res.render("index", { title: "CodePushServer" });
 });
 
 router.get("/README.md", (req, res, next) => {
@@ -33,7 +33,7 @@ router.get("/README.md", (req, res, next) => {
 });
 
 router.get("/tokens", (req, res) => {
-  res.render("code-push/tokens", { title: "获取token" });
+  res.render("tokens", { title: "获取token" });
 });
 
 router.get("/updateCheck", (req, res, next) => {

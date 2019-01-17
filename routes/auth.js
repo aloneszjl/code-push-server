@@ -7,7 +7,7 @@ var log4js = require("log4js");
 var log = log4js.getLogger("cps:auth");
 
 router.get("/password", (req, res) => {
-  res.render("code-push/auth/password", { title: "CodePushServer" });
+  res.render("auth/password", { title: "CodePushServer" });
 });
 
 router.get("/login", (req, res) => {
@@ -16,7 +16,7 @@ router.get("/login", (req, res) => {
     log.debug(`login redirect:${codePushWebUrl}`);
     res.redirect(`${codePushWebUrl}/login`);
   } else {
-    res.render("code-push/auth/login", { title: "CodePushServer" });
+    res.render("auth/login", { title: "CodePushServer" });
   }
 });
 
@@ -31,7 +31,7 @@ router.get("/register", (req, res) => {
     log.debug(`register redirect:${codePushWebUrl}`);
     res.redirect(`${codePushWebUrl}/register`);
   } else {
-    res.render("code-push/auth/login", { title: "CodePushServer" });
+    res.render("auth/login", { title: "CodePushServer" });
   }
 });
 
