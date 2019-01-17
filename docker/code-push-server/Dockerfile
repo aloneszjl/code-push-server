@@ -1,5 +1,6 @@
 FROM node:8.11.4-alpine
 
+RUN apk add --update git openssh
 RUN npm i -g https://github.com/aloneszjl/code-push-server.git pm2@latest --no-optional
 
 COPY ./process.json /process.json
